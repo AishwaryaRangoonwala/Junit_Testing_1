@@ -4,6 +4,9 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
+// @DisplayNameGeneration(DisplayNameGenerator.Standard.class)
+// @DisplayNameGeneration(DisplayNameGenerator.IndicativeSentences.class)
 class DemoUtilsTest {
 
     DemoUtils demoUtils;
@@ -32,6 +35,7 @@ class DemoUtilsTest {
     }
 
     @Test
+    @DisplayName("Equals and Not Equals")
     void testEqualsAnsNotEquals() {
         System.out.println("Running test: testEqualsAnsNotEquals");
         assertEquals(6, demoUtils.add(2,4), "2+4 must be 6");
@@ -39,6 +43,7 @@ class DemoUtilsTest {
     }
 
     @Test
+    @DisplayName("Null and Not Null")
     void testNullAndNotNull() {
         System.out.println("Running test: testNullAndNotNull");
         String str1 = null;
